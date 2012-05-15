@@ -9,24 +9,34 @@ package br.edu.uniritter.examples;
  * @author alu201230433
  */
 public class Calculator {
+	
+	double _a;
+	double _b;
+	
     
-    public static double add(double a, double b) {
-        return a + b;
+    public Calculator(double a, double b) {
+		_a = a;
+		_b = b;
+		
+	}
+
+	public double add() {        
+		return _a + _b;
     }
     
-    public static double subtract(double a, double b) {
-        return a - b;
+    public double subtract() {
+        return _a - _b;
     }
     
-    public static double multiply(double a, double b) {
-        return a * b;
+    public double multiply() {
+        return _a * _b;
     }
     
-    public static double divide(double a, double b) {
-        return a / b;
+    public double divide() {
+        return _a / _b;
     }
     
-    public static double fatorial(double a) {
+    public double fatorial(double a) {
         /*int res = 1;
         for (int i=a; i>1; i--) {
             res = res*i;

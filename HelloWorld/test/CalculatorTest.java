@@ -14,31 +14,38 @@ import static org.junit.Assert.*;
 /**
  *
  * @author alu201230433
+ * 
+ * 
  */
 public class CalculatorTest {
-    //testando commit 3
+    //testing commit 3
+	
+	Calculator calc;
+	
+	@Before
+    public void setUp() {
+		calc = new Calculator(1, 1);
+    }
+	
+	
     @Test
     public void testAdd() {
-        double x = Calculator.add(1,1);
-        assertEquals(x, 2,0.01);
+    	assertEquals(2, calc.add(),0.01);
     }
     
     @Test
     public void testSubtract() {
-        double x = Calculator.subtract(2,1);
-        assertEquals(x, 1, 0.01);
+    	assertEquals(0, calc.subtract(),0.01);
     }
     
     @Test
     public void testMultiply() {
-        double x = Calculator.multiply(5,7);
-        assertEquals(x, 35, 0.01);
+    	assertEquals(1, calc.multiply(),0.01);
     }
     
     @Test
     public void testDivide() {
-        double x = Calculator.divide(10,3);
-        assertEquals(x, 3.33, 0.01);
+    	assertEquals(1, calc.divide(),0.01);
     }
     
     /*@Test
@@ -50,7 +57,8 @@ public class CalculatorTest {
      
     @Test
     public void testFatorial() {
-        double x = Calculator.fatorial(6);
+    	Calculator calc = new Calculator(1,1);
+    	double x = calc.fatorial(6);
         assertEquals(x, 720, 0.01);
     }
     
@@ -66,9 +74,7 @@ public class CalculatorTest {
     public static void tearDownClass() throws Exception {
     }
     
-    @Before
-    public void setUp() {
-    }
+    
     
     @After
     public void tearDown() {
