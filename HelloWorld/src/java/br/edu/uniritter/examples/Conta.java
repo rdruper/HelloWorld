@@ -18,7 +18,7 @@ public class Conta {
 	}
 	
 	public void sacar(float quantia) {
-		_saldo -= quantia;
+		if (_saldo >= quantia) _saldo -= quantia;
 	}
 	
 	public float verificaSaldo() {
